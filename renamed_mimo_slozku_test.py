@@ -1,2 +1,2 @@
-def test_mimo_slozku():
+def mimo_slozku():
     assert False
