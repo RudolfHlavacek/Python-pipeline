@@ -10,5 +10,5 @@ def bye():
     """Func bye()"""
     print("bye")
 
-    
+
 print(hello())
