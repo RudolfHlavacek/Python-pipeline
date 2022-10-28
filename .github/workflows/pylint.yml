@@ -26,4 +26,4 @@ jobs:
         set message=Hello Wirld
         echo %message%
     - name: Running SIMPLE python code inside BUILD job
-      run: return 42
+      run: exit -42
