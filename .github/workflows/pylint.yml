@@ -1,6 +1,6 @@
 name: Pylint
 
-on: [push]
+on: [push,workflow_dispatch]
 
 jobs:
   build:
@@ -32,3 +32,18 @@ jobs:
         coverage run --branch -m pytest -v
         coverage report -m
         coverage html
+    - name: Running MAIN with arg 0
+      run: |
+        python main.py 0
+    - name: Running MAIN with arg 1
+      run: |
+        python main.py 1
+    - name: Running MAIN with arg 42
+      run: |
+        python main.py 42
+    - name: Running MAIN with arg -1
+      run: |
+        python main.py -1
+    - name: Running MAIN with arg 13
+      run: |
+        python main.py -13
