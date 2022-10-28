@@ -1,6 +1,7 @@
 """
 Just simply python file.
 """
+import sys
 
 def hello():
     """Func hello()"""
@@ -12,3 +13,5 @@ def bye():
 
 if __name__ == '__main__':
     print(hello())
+    
+    return sys.argv[1]
