@@ -17,5 +17,3 @@ if __name__ == '__main__':
     for i, arg in enumerate(sys.argv):
         logger.debug('sys.argv[{}]: {} | type: {}', i, arg, type(arg))
         print('sys.argv[{}]: {}'.format( i, arg))
-        
-        exit(int(sys.argv[1]))
