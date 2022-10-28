@@ -34,7 +34,7 @@ jobs:
         coverage html
     - name: Running MAIN with arg 0
       run: |
-        # pip install loguru
+        pip install loguru
         python main.py 0
     - name: Running MAIN with arg 1
       run: |
