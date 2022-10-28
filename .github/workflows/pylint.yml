@@ -24,8 +24,10 @@ jobs:
     - name: Testuji PowerShell
       run: |
         $message="Hello Wirld"
-        echo %message%
+        echo $message
+        $var3="jmenuji se $(Read-Host 'Jak se jmenuješ?')"
     - name: Running python coverage
       run: |
+        pip install pytest coverage
         coverage run --branch -m pytest -v
         coverage report -m
