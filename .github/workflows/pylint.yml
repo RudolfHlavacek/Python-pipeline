@@ -32,11 +32,8 @@ jobs:
         coverage run --branch -m pytest -v
         coverage report -m
         coverage html
-    - name: Archive code coverage results
-        uses:actions/upload-artifact@v3
-        with:
-          name: code-coverage-report
-          path: output/test/code-coverage.html
+    - name: Download all workflow run artifacts
+      uses: actions/download-artifact@v3
     - name: Running MAIN with arg 0
       run: |
         pip install loguru
