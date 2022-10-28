@@ -12,3 +12,4 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - run: echo "AHOJ, jak se mas?"
+          echo "Druhy radek"
