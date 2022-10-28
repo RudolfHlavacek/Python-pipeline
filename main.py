@@ -1,7 +1,7 @@
 """
 Just simply python file.
 """
-from logguru import logger
+from loguru import logger
 import sys
 
 def hello():
