@@ -4,11 +4,11 @@ Just simply python file.
 
 def hello():
     """Func hello()"""
-    print("hi")
+    print("hello")
 
 def bye():
     """Func bye()"""
     print("bye")
 
-
-print(hello())
+if __name__ == '__main__':
+    print(hello())
