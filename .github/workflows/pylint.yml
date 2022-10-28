@@ -34,8 +34,8 @@ jobs:
         coverage report -m
         coverage html
     - name: Archive code coverage results
-        uses: actions/upload-artifact@v3
-        with:
+      uses: actions/upload-artifact@v3
+      with:
           name: code-coverage-report
     - name: Running MAIN with arg 0
       run: |
