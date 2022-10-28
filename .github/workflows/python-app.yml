@@ -12,3 +12,10 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - run: ping 127.0.0.1
+  
+  job-to-run-after-first:
+    runs-on: windows-latest
+    needs: check-bats-version
+    steps:
+      - run: echo "Hello"
+      - run: echo "Druhy Hello"
