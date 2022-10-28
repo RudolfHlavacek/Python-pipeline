@@ -1,6 +1,7 @@
 """
 Just simply python file.
 """
+from logguru import logger
 import sys
 
 def hello():
@@ -13,5 +14,7 @@ def bye():
 
 if __name__ == '__main__':
     print(hello())
-    
-    return sys.argv[1]
+    for i, arg in enumerate(sys.argv):
+        logger.debug('sys.argv[{}]: {}', i, arg)
+        print('sys.argv[{}]: {}'.format( i, arg))
+        
