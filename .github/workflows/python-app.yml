@@ -11,5 +11,4 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - run: echo "AHOJ, jak se mas?"
-          echo "Druhy radek"
+      - run: ping 8.8.8.8
