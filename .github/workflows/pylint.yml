@@ -24,7 +24,7 @@ jobs:
     - name: Testuji PowerShell
       run: |
         
-        $message= Hello Wirld
+        $message= "Hello Wirld"
         echo %message%
     - name: Running python coverage
       run: |
