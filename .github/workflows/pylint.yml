@@ -10,7 +10,10 @@ jobs:
         python-version: ["3.8", "3.9", "3.10"]
     steps:
     - name: Dump GitHub Context
-      run: echo "${{ github_context }}"
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+      
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v3
     - name: Set up Python ${{ matrix.python-version }}
