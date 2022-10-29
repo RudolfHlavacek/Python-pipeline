@@ -6,9 +6,9 @@ on:
 jobs:
   get-context:
     runs-on: windows-latest
-    #strategy:
-    #  matrix:
-    #    python-version: ["3.8", "3.9", "3.10"]
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
     steps:
     - name: Dump GitHub Context
       env:
