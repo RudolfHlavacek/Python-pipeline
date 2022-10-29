@@ -1,7 +1,7 @@
 name: Get GITHUB CONTEXT
 
 on:
-  workflow_dispatch:
+  - workflow_dispatch
 
 jobs:
   get-context:
