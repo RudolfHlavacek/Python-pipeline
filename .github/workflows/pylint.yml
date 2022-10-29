@@ -37,6 +37,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: code-coverage-report
+          path: coverage_html_report
     - name: Running MAIN with arg 0
       run: |
         pip install loguru
