@@ -7,7 +7,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        python-version: ["2.4", "2.7", "3.8", "3.9", "3.10"]
+        python-version: ["3.8", "3.9", "3.10"]
     steps:
     - uses: actions/checkout@v3
     - uses: actions/download-artifact@v3
@@ -37,7 +37,12 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: code-coverage-report
-          path: coverage_html_report
+          path: coverage_html_report #coverage_html_report/main_py.html
+    - name: Archive code coverage - ONE FILE
+      uses: actions/upload-artifact@v3
+      with:
+          name: code-coverage-ONE-file
+          path: coverage_html_report\main_py.html
     - name: Running MAIN with arg 0
       run: |
         pip install loguru
