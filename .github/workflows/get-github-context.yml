@@ -2,7 +2,7 @@ name: Get GITHUB CONTEXT
 
 on:
   workflow_dispatch:
-
+  push:
 jobs:
   get-context:
     runs-on: windows-latest
