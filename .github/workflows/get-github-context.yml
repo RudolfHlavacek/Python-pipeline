@@ -1,6 +1,6 @@
 name: Get GITHUB CONTEXT
 
-on: [workflow_dispatch]
+on: [workflow_dispatch, push]
 
 jobs:
   get-context:
