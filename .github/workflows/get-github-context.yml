@@ -3,12 +3,10 @@ name: Get GITHUB CONTEXT
 on:
   workflow_dispatch:
   push:
+
 jobs:
   get-context:
     runs-on: windows-latest
-    strategy:
-      matrix:
-        python-version: ["3.8", "3.9", "3.10"]
     steps:
     - name: Dump GitHub Context
       env:
