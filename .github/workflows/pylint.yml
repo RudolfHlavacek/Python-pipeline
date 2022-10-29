@@ -1,22 +1,15 @@
 name: Pylint
 
-on: [push,workflow_dispatch]
+on: [push]
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-latest]
         python-version: ["3.8", "3.9", "3.10"]
     steps:
-    - name: Dump GitHub Context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo "$GITHUB_CONTEXT"
-      
     - uses: actions/checkout@v3
-    - uses: actions/download-artifact@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
@@ -27,40 +20,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint --exit-zero $(git ls-files '*.py')
-    - name: Testuji PowerShell
-      run: |
-        $message="Hello Wirld"
-        echo $message
-        $var3="jmenuji se $(Read-Host 'Jak se jmenuješ?')"
-    - name: Running python coverage
-      run: |
-        pip install pytest coverage loguru
-        coverage run --branch -m pytest -v
-        coverage report -m
-        coverage html
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v3
-      with:
-          name: code-coverage-report-ABC
-          path: coverage_html_report
-    - name: Archive code coverage - ONE FILE
-      uses: actions/upload-artifact@v3
-      with:
-          name: code-coverage-ONE-file
-          path: coverage_html_report/main_py.html
-    - name: Running MAIN with arg 0
-      run: |
-        python main.py 0
-    - name: Running MAIN with arg 1
-      run: |
-        python main.py 1
-    - name: Running MAIN with arg 42
-      run: |
-        python main.py 42
-    - name: Running MAIN with arg -1
-      run: |
-        python main.py -1
-    - name: Running MAIN with arg 13
-      run: |
-        python main.py -13
+        pylint $(git ls-files '*.py')
