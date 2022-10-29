@@ -39,10 +39,10 @@ jobs:
           name: code-coverage-report-${{ matrix.python-version }}
           path: coverage_html_report
     - name: Archive code coverage - ONE FILE
-      uses: actions\upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
           name: code-coverage-ONE-file
-          path: coverage_html_report\main_py.html
+          path: coverage_html_report/main_py.html
     - name: Running MAIN with arg 0
       run: |
         pip install loguru
