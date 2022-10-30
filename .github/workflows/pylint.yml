@@ -2,6 +2,10 @@ name: Pylint
 
 on: [push,workflow_dispatch]
 
+concurrency:
+  group: pylint-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
