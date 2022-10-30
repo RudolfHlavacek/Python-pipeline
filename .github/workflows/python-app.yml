@@ -5,11 +5,14 @@ name: Python application
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "dev-*" ]
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
-    
+
+concurrency:
+  group: concurrency-python-app-${{ github.head_ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
