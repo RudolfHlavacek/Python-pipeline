@@ -1,14 +1,19 @@
 """
 Just simply python file.
 """
+from loguru import logger
+import sys
 
 def hello():
     """Func hello()"""
-    print("hi")
+    print("hello")
 
 def bye():
     """Func bye()"""
     print("bye")
 
-
-print(hello())
+if __name__ == '__main__':
+    print(hello())
+    for i, arg in enumerate(sys.argv):
+        logger.debug('sys.argv[{}]: {} | type: {}', i, arg, type(arg))
+        print('sys.argv[{}]: {}'.format( i, arg))
