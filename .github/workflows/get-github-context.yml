@@ -11,6 +11,4 @@ jobs:
     - name: Dump GitHub Context
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: |#echo "$GITHUB_CONTEXT"
-        - echo HE;;p
-        - exit 1
+      run: echo "$GITHUB_CONTEXT"
