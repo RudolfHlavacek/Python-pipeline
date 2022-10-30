@@ -45,7 +45,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest || $? = 1
+        pytest --exit-zero
 
   build-2:
 
@@ -74,7 +74,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest src/ || 1
+        pytest --exit-zero src
 
   build-3:
 
@@ -103,7 +103,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest src\. || [ $? = 1 ]
+        pytest --exit-zero tests
 
   build-4:
 
