@@ -32,6 +32,4 @@ jobs:
         pip install -r requirements.txt
     - name: Analysing the code with pylint
       run: |
-        pylint --exit-zero src
-        echo ----------------------------------
-        pylint --exit-zero
+        pylint src
