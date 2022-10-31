@@ -11,5 +11,5 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - uses: RudolfHlavacek/Python-pipeline/.github/workflows/learn-github-actions.yml@dev-ci
+      - uses: RudolfHlavacek/Python-pipeline/.github/workflows/pylint.yml@dev-ci
 
