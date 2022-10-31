@@ -32,4 +32,4 @@ jobs:
         pip install -r requirements.txt
     - name: Analysing the code with pylint
       run: |
-        pylint src
+        pylint --output-format=colorized src
