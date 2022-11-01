@@ -1,6 +1,8 @@
 # Python-pipeline
 A repository for learning basics of CI CD in python.
 
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
+
 ![Badge twitter](https://badgen.net/badge/hello/world/red?icon=twitter)
 
 ![Badge watchers](https://badgen.net/github/watchers/RudolfHlavacek/Python-pipeline)
